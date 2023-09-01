@@ -1,0 +1,9 @@
+<% if @articles.any? %>
+  <div class="list-group list-group-flush mt-n4 mt-md-0 mx-n3">
+    <%= render @articles %>
+  </div>
+<% else %>
+  <p>You haven't added any articles, yet.</p>
+<% end %>
+
+<%= link_to "Add an article", new_article_path, class: "btn btn-primary mt-4" %>

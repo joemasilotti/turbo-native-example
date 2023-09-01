@@ -1,0 +1,26 @@
+<% if article.errors.any? %>
+  <div class="alert alert-danger" role="alert">
+    <p class="alert-heading fw-semibold mb-1">Please fix these issues to add your article:</p>
+    <ul class="mb-0">
+      <% article.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with model: article, class: "row g-3" do |form| %>
+  <div>
+    <%= form.label :title, class: "form-label" %>
+    <%= form.text_field :title, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.label :body, class: "form-label" %>
+    <%= form.text_area :body, class: "form-control", rows: 8 %>
+  </div>
+
+  <div>
+    <%= form.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

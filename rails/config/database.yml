@@ -1,0 +1,5 @@
+development:
+  database: turbo_native_development
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>

@@ -1,0 +1,9 @@
+<div class="d-flex align-items-start">
+  <h1 class="h3 d-turbo-native-none mb-4 me-auto">Edit article</h1>
+  <%= link_to @article, class: "btn btn-outline-danger d-flex gap-2 mb-4" do %>
+    <i class="bi bi-trash"></i>
+    Delete
+  <% end %>
+</div>
+
+<%= render "form", article: @article %>

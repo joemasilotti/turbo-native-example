@@ -1,0 +1,18 @@
+<%= link_to article, class: "list-group-item list-group-item-action py-3" do %>
+  <div class="row align-items-top">
+    <div class="col pe-0">
+      <h2 class="h4"><%= article.title %></h2>
+
+      <div class="ms-auto">
+        <p class="text-muted small">Added on <%= article.created_at.strftime("%b %d") %></p>
+      </div>
+
+      <p class="line-clamp-2 text-body-secondary mb-0"><%= article.body %></p>
+    </div>
+
+    <div class="col d-md-none flex-grow-0 flex-shrink-1 px-2 my-auto">
+      <i class="bi bi-chevron-right text-body-tertiary"></i>
+    </div>
+  </div>
+<% end %>
+
