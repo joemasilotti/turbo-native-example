@@ -30,3 +30,9 @@ Once the server is running you can start the iOS app.
 1. Download and install Xcode from the [App Store](https://apps.apple.com/us/app/xcode/id497799835?mt=12)
 1. Open `ios/Turbo Native Example.xcodeproj`
 1. Run the app via Product → Run in Xcode
+
+## Features as branches
+
+Each article or video has its own branch. After cloning the repo, checkout the corresponding branch to see the finished code.
+
+* SwiftUI views - `swiftui` [branch](https://github.com/joemasilotti/turbo-native-example/tree/swiftui)
