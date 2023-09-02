@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84BAA45D2AA2E98100261D3A /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAA45C2AA2E98100261D3A /* ArticleView.swift */; };
+		84BAA4602AA2E9C200261D3A /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BAA45F2AA2E9C200261D3A /* ArticleViewModel.swift */; };
 		84DE51CE2AA295B500BBC786 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE51CD2AA295B500BBC786 /* AppDelegate.swift */; };
 		84DE51D02AA295B500BBC786 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DE51CF2AA295B500BBC786 /* SceneDelegate.swift */; };
 		84DE51D52AA295B500BBC786 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DE51D32AA295B500BBC786 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84BAA45C2AA2E98100261D3A /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		84BAA45F2AA2E9C200261D3A /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		84DE51CA2AA295B500BBC786 /* Turbo Native.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Turbo Native.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DE51CD2AA295B500BBC786 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84DE51CF2AA295B500BBC786 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84BAA45B2AA2E97D00261D3A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				84BAA45C2AA2E98100261D3A /* ArticleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		84BAA45E2AA2E9BB00261D3A /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				84BAA45F2AA2E9C200261D3A /* ArticleViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		84DE51C12AA295B500BBC786 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +81,8 @@
 				84DE51E22AA295BF00BBC786 /* Controllers */,
 				84DE51E12AA295BA00BBC786 /* Delegates */,
 				84DE51E32AA295C400BBC786 /* Resources */,
+				84BAA45E2AA2E9BB00261D3A /* View Models */,
+				84BAA45B2AA2E97D00261D3A /* Views */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -172,7 +194,9 @@
 			files = (
 				84DE51E52AA2961200BBC786 /* TurboNavigationController.swift in Sources */,
 				84DE51CE2AA295B500BBC786 /* AppDelegate.swift in Sources */,
+				84BAA4602AA2E9C200261D3A /* ArticleViewModel.swift in Sources */,
 				84DE51D02AA295B500BBC786 /* SceneDelegate.swift in Sources */,
+				84BAA45D2AA2E98100261D3A /* ArticleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

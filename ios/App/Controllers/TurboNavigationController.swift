@@ -1,3 +1,4 @@
+import SwiftUI
 import Turbo
 import UIKit
 import WebKit
@@ -24,13 +25,23 @@ class TurboNavigationController: UINavigationController {
 
         let session = Session(webViewConfiguration: configuration)
         session.delegate = self
+        session.pathConfiguration = PathConfiguration(sources: [
+            .server(rootURL.appending(path: "/configuration.json"))
+        ])
         return session
     }()
 
     private func visit(_ proposal: VisitProposal) {
-        let visitable = VisitableViewController(url: proposal.url)
-        pushViewController(visitable, animated: true)
-        session.visit(visitable, options: proposal.options)
+        if proposal.properties["controller"] as? String == "article" {
+            let viewModel = ArticleViewModel(path: proposal.url.path())
+            let view = ArticleView(viewModel: viewModel)
+            let controller = UIHostingController(rootView: view)
+            pushViewController(controller, animated: true)
+        } else {
+            let visitable = VisitableViewController(url: proposal.url)
+            pushViewController(visitable, animated: true)
+            session.visit(visitable, options: proposal.options)
+        }
     }
 }
 
